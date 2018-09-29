@@ -1,0 +1,63 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions
+// and other software and tools, and its AMPP partner logic
+// functions, and any output files from any of the foregoing
+// (including device programming or simulation files), and any
+// associated documentation or information are expressly subject
+// to the terms and conditions of the Altera Program License
+// Subscription Agreement, Altera MegaCore Function License
+// Agreement, or other applicable license agreement, including,
+// without limitation, that your use is for the sole purpose of
+// programming logic devices manufactured by Altera and sold by
+// Altera or its authorized distributors.  Please refer to the
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench template that is freely editable to
+// suit user's needs .Comments are provided in each section to help the user
+// fill out necessary details.
+// *****************************************************************************
+// Generated on "09/29/2018 12:07:52"
+
+// Verilog Test Bench template for design : counter_10
+//
+// Simulation tool : ModelSim-Altera (Verilog)
+//
+
+`timescale 100 ns/ 10 ns
+module counter_10_vlg_tst();
+// constants
+// general purpose registers
+reg eachvec;
+// test vector input registers
+reg clk;
+reg rst;
+reg sel;
+// wires
+wire carry;
+wire [3:0]  counter;
+
+// assign statements (if any)
+counter_10 i1 (
+// port map - connection between master ports and signals/registers
+	.carry(carry),
+	.clk(clk),
+	.counter(counter),
+	.rst(rst),
+	.sel(sel)
+);
+initial
+	begin
+		 clk = 0;
+		 rst = 1;
+		 sel = 1;
+		 #200 rst = 0;
+		 #2000 sel = 0;
+		 #4000 $stop;
+		 $display("Running testbench");
+	end
+always
+	begin
+		 #50 clk = !clk;
+	end
+endmodule
