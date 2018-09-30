@@ -42,22 +42,22 @@ decoder_4_16 i1 (
 );
 initial
 	begin
-		insig = 4'b0000;
-		#100 insig = 4'b0001;
-		#100 insig = 4'b0010;
-		#100 insig = 4'b0011;
-		#100 insig = 4'b0100;
-		#100 insig = 4'b0101;
-		#100 insig = 4'b0110;
-		#100 insig = 4'b0111;
-		#100 insig = 4'b1000;
-		#100 insig = 4'b1001;
-		#100 insig = 4'b1010;
-		#100 insig = 4'b1011;
-		#100 insig = 4'b1100;
-		#100 insig = 4'b1101;
-		#100 insig = 4'b1110;
-		#100 insig = 4'b1111;
+		insig = 4'h0;
+		#100 insig = 4'h1;
+		#100 insig = 4'h2;
+		#100 insig = 4'h3;
+		#100 insig = 4'h4;
+		#100 insig = 4'h5;
+		#100 insig = 4'h6;
+		#100 insig = 4'h7;
+		#100 insig = 4'h8;
+		#100 insig = 4'h9;
+		#100 insig = 4'hA;
+		#100 insig = 4'hB;
+		#100 insig = 4'hC;
+		#100 insig = 4'hD;
+		#100 insig = 4'hE;
+		#100 insig = 4'hF;
 		#1000 $stop;
 		$display("Running testbench");
 	end
